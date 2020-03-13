@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Vibrator
 import android.view.HapticFeedbackConstants
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -22,6 +24,20 @@ class MainActivity : AppCompatActivity() {
 //            it.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
 //            Toast.makeText(this, "Long click detected", Toast.LENGTH_SHORT).show()
             true
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menus, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.vibrator -> {
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 
