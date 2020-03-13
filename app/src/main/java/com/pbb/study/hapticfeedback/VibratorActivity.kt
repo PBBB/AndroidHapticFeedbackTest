@@ -8,8 +8,10 @@ import android.os.Vibrator
 import android.os.VibrationEffect
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.getSystemService
+import kotlinx.android.synthetic.main.activity_vibrator.*
 
 class VibratorActivity : AppCompatActivity() {
 
@@ -32,5 +34,17 @@ class VibratorActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    fun performOneShotOrWaveformVibration(view: View) {
+        val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+
+        if (radioButtonOneShot.isChecked) {
+            val time = timeTextField.text.toString().toLong()
+            val amplitude = ampliTextField.text.toString().toInt()
+            vibrator.vibrate(VibrationEffect.createOneShot(time, amplitude))
+        } else if (radioButtonWaveForm.isChecked) {
+            Toast.makeText(this.applicationContext, "WaveForm WIP", 1).show()
+        }
     }
 }

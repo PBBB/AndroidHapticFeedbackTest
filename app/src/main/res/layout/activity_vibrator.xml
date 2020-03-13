@@ -8,7 +8,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -113,24 +115,18 @@
                 android:paddingHorizontal="8dp">
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/timeTextView"
                     android:layout_width="1sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Time(ms)"
                     android:textAlignment="viewStart" />
 
-                <SeekBar
-                    android:id="@+id/seekBar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2" />
-
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/timeTextField"
                     android:layout_width="1sp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:ems="10"
                     android:inputType="number"
                     android:text="100"
@@ -145,23 +141,42 @@
                 android:paddingHorizontal="8dp">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/amplitextView"
                     android:layout_width="1sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Amplitude" />
 
-                <SeekBar
-                    android:id="@+id/seekBar2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2" />
-
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/ampliTextField"
+                    android:layout_width="1sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="20"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:id="@+id/repeatTextView"
                     android:layout_width="1sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:text="Repeat" />
+
+                <EditText
+                    android:id="@+id/repeatTextField"
+                    android:layout_width="1sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:ems="10"
                     android:inputType="number"
                     android:text="0"
@@ -172,7 +187,29 @@
                 android:id="@+id/vibrateButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="performOneShotOrWaveformVibration"
                 android:text="Vibrate" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="8dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="8dp"
+                android:text="Tips"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tipTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:text="Time(ms): The number of milliseconds to vibrate. This must be a positive number. \n\nAmplitude: The strength of the vibration. This must be a value between 1 and 255, or DEFAULT_AMPLITUDE(0). \n\nRepeat: No use"
+                android:textAlignment="viewStart" />
         </LinearLayout>
     </ScrollView>
 
