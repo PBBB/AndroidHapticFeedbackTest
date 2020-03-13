@@ -1,0 +1,2 @@
+rootProject.name='Haptic Feedback'
+include ':app'
