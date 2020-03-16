@@ -97,12 +97,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="true"
+                    android:onClick="changeInfo"
                     android:text="OneShot" />
 
                 <RadioButton
                     android:id="@+id/radioButtonWaveForm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="changeInfo"
                     android:text="Waveform" />
 
             </RadioGroup>
@@ -127,8 +129,9 @@
                     android:layout_width="1sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
+                    android:digits="0123456789.,"
                     android:ems="10"
-                    android:inputType="number"
+                    android:inputType="number|numberDecimal"
                     android:text="100"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -141,7 +144,7 @@
                 android:paddingHorizontal="8dp">
 
                 <TextView
-                    android:id="@+id/amplitextView"
+                    android:id="@+id/ampliTextView"
                     android:layout_width="1sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -152,8 +155,9 @@
                     android:layout_width="1sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
+                    android:digits="0123456789,-"
                     android:ems="10"
-                    android:inputType="number"
+                    android:inputType="numberSigned|numberDecimal"
                     android:text="20"
                     android:textAlignment="center" />
             </LinearLayout>
@@ -178,17 +182,34 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:ems="10"
-                    android:inputType="number"
-                    android:text="0"
+                    android:inputType="numberSigned"
+                    android:text="-1"
                     android:textAlignment="center" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/vibrateButton"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="performOneShotOrWaveformVibration"
-                android:text="Vibrate" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/vibrateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="performOneShotOrWaveformVibration"
+                    android:paddingEnd="4dp"
+                    android:text="Vibrate" />
+
+                <Button
+                    android:id="@+id/stopVibrateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="stopVibrate"
+                    android:paddingStart="4dp"
+                    android:text="Stop" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView8"
@@ -208,6 +229,7 @@
                 android:layout_height="wrap_content"
                 android:lineSpacingMultiplier="1.2"
                 android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
                 android:text="Time(ms): The number of milliseconds to vibrate. This must be a positive number. \n\nAmplitude: The strength of the vibration. This must be a value between 1 and 255, or DEFAULT_AMPLITUDE(-1). \n\nRepeat: No use"
                 android:textAlignment="viewStart" />
         </LinearLayout>

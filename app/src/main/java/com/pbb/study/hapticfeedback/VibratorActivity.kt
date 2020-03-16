@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.getSystemService
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_vibrator.*
 
 class VibratorActivity : AppCompatActivity() {
@@ -44,7 +45,29 @@ class VibratorActivity : AppCompatActivity() {
             val amplitude = ampliTextField.text.toString().toInt()
             vibrator.vibrate(VibrationEffect.createOneShot(time, amplitude))
         } else if (radioButtonWaveForm.isChecked) {
-            Toast.makeText(this.applicationContext, "WaveForm WIP", 1).show()
+            val times = timeTextField.text.toString().split(",").map { it.toLong() }.toLongArray()
+            val amplitudes = ampliTextField.text.toString().split(",").map { it.toInt() }.toIntArray()
+            val repeat = repeatTextField.text.toString().toInt()
+            vibrator.vibrate(VibrationEffect.createWaveform(times, amplitudes, repeat))
         }
+    }
+
+    fun changeInfo(view: View) {
+        if (view == radioButtonOneShot) {
+            tipTextView.text = "Time(ms): The number of milliseconds to vibrate. This must be a positive number. \n\nAmplitude: The strength of the vibration. This must be a value between 1 and 255, or DEFAULT_AMPLITUDE(-1). \n\nRepeat: No use"
+            timeTextView.text = "Time(ms)"
+            ampliTextView.text = "Amplitude"
+            repeatTextView.text = "Repeat"
+        } else if (view == radioButtonWaveForm) {
+            tipTextView.text = "Timings and Amplitudes array should be 1-to-1 paired\n\nTimings([long]): The pattern of alternating on-off timings, starting with off. Timing values of 0 will cause the timing / amplitude pair to be ignored. e.g. 200, 300\n\nAmplitudes([int]): he amplitude values of the timing / amplitude pairs. Amplitude values must be between 0 and 255, or equal to DEFAULT_AMPLITUDE(-1). An amplitude value of 0 implies the motor is off. e.g. 100, 200\n\nRepeat(int): The index into the timings array at which to repeat, or -1 if you you don't want to repeat."
+            timeTextView.text = "Timings([ms])"
+            ampliTextView.text = "Amplitudes"
+            repeatTextView.text = "Repeat"
+        }
+    }
+
+    fun stopVibrate(view: View) {
+        val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibrator.cancel()
     }
 }
