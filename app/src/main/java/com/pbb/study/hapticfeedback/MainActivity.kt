@@ -2,17 +2,14 @@ package com.pbb.study.hapticfeedback
 
 import android.content.DialogInterface
 import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Vibrator
 import android.view.HapticFeedbackConstants
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -46,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     fun performHaptics(view: View) {
         if (view is Button) {
-            when ((view as Button).text.toString()) {
+            when (view.text.toString()) {
                 "LONG_PRESS (0)" -> view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
                 "VIRTUAL_KEY (1)" -> view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
                 "KEYBOARD_PRESS / KEYBOARD_TAP (3)" -> view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_PRESS)
@@ -61,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
     fun performAndroidRHaptics (view: View) {
         if (view is Button) {
-            when ((view as Button).text.toString()) {
+            when (view.text.toString()) {
                 "CONFIRM (16, Android R)" -> view.performHapticFeedback(16)
                 "REJECT (17, Android R)" -> view.performHapticFeedback(17)
             }
@@ -69,11 +66,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun playCustomHaptics(view: View) {
-        var id = hapticsID.text.toString().toIntOrNull()
+        val id = hapticsID.text.toString().toIntOrNull()
         if (id == null) {
-            var dialogBuilder = AlertDialog.Builder(this)
+            val dialogBuilder = AlertDialog.Builder(this)
                 .setPositiveButton("OK", DialogInterface.OnClickListener {
-                        dialog, id -> return@OnClickListener
+                        _, _ -> return@OnClickListener
                 })
             dialogBuilder.setMessage("")
             val alert =  dialogBuilder.create()

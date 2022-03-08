@@ -2,16 +2,14 @@ package com.pbb.study.hapticfeedback
 
 import android.content.Context
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Vibrator
 import android.os.VibrationEffect
+import android.os.Vibrator
+import android.view.InputDevice
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.content.getSystemService
-import androidx.core.view.isVisible
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_vibrator.*
 
 class VibratorActivity : AppCompatActivity() {
@@ -24,6 +22,7 @@ class VibratorActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.Q)
     fun performPredefinedVibration(view: View) {
+//        val vibrator = InputDevice.getDevice(InputDevice.getDeviceIds()[0]).vibratorManager.defaultVibrator
         val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
         if (view is Button) {
