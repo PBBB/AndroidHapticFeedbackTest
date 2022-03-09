@@ -16,7 +16,7 @@ class VibratorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vibrator)
-        this.title = "Vibrator"
+        this.title = "OneShot & Waveform"
 
         // Check support for amplitude control
         val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator

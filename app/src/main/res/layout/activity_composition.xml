@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompositionActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/primSupportTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="8dp"
+                android:paddingBottom="8dp"
+                android:text="This device may not support the following primitives."
+                android:textAlignment="viewStart" />
+
+            <Button
+                android:id="@+id/buttonPrim1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:longClickable="true"
+                android:onClick="performPrimitives"
+                android:text="PRIMITIVE_CLICK (1)" />
+
+            <TextView
+                android:id="@+id/prim1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="This effect should produce a sharp, crisp click sensation."
+                android:textAlignment="viewStart" />
+
+            <Button
+                android:id="@+id/buttonPrim2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performPrimitives"
+                android:text="PRIMITIVE_THUD (2, Android S)" />
+
+            <TextView
+                android:id="@+id/prim2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="A haptic effect that simulates downwards movement with gravity. Often followed by extra energy of hitting and reverberation to augment physicality."
+                android:textAlignment="viewStart" />
+
+            <Button
+                android:id="@+id/buttonPrim3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performPrimitives"
+                android:text="PRIMITIVE_SPIN (3, Android S)" />
+
+            <TextView
+                android:id="@+id/prim3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="A haptic effect that simulates spinning momentum."
+                android:textAlignment="viewStart" />
+
+            <Button
+                android:id="@+id/buttonPrim4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performPrimitives"
+                android:text="PRIMITIVE_QUICK_RISE (4)" />
+
+            <TextView
+                android:id="@+id/prim4TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="A haptic effect that simulates quick upward movement against gravity."
+                android:textAlignment="viewStart" />
+
+            <Button
+                android:id="@+id/buttonPrim5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performPrimitives"
+                android:text="PRIMITIVE_SLOW_RISE (5)" />
+
+            <TextView
+                android:id="@+id/prim5TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="A haptic effect that simulates slow upward movement against gravity."
+                android:textAlignment="viewStart" />
+
+            <Button
+                android:id="@+id/buttonPrim6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performPrimitives"
+                android:text="PRIMITIVE_QUICK_FALL (6)" />
+
+            <TextView
+                android:id="@+id/prim6TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="A haptic effect that simulates quick downwards movement with gravity."
+                android:textAlignment="viewStart" />
+
+            <Button
+                android:id="@+id/buttonPrim7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performPrimitives"
+                android:text="PRIMITIVE_TICK (7)" />
+
+            <TextView
+                android:id="@+id/prim7TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="This very short effect should produce a light crisp sensation intended to be used repetitively for dynamic feedback."
+                android:textAlignment="viewStart" />
+
+            <Button
+                android:id="@+id/buttonPrim8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performPrimitives"
+                android:text="PRIMITIVE_LOW_TICK (8, Android S)" />
+
+            <TextView
+                android:id="@+id/prim8TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="This very short low frequency effect should produce a light crisp sensation intended to be used repetitively for dynamic feedback."
+                android:textAlignment="viewStart" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/hapticsID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="hapticsID"
+                    android:ems="10"
+                    android:hint="Custom ID"
+                    android:inputType="number"
+                    android:minHeight="48dp" />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="performPrimitives"
+                    android:text="Play Haptics" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
