@@ -3,7 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/composition"
+        android:title="Composition" />
+    <item
         android:id="@+id/vibrator"
-        android:title="Use Vibrator"
-        app:showAsAction="always" />
+        android:title="OneShot &amp; Waveform"
+        app:showAsAction="collapseActionView" />
 </menu>

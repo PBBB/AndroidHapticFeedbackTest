@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="8dp"
                 android:paddingVertical="8dp"
                 android:text="Predefined"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -83,10 +84,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="8dp"
                 android:paddingVertical="8dp"
                 android:text="Custom"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/ampCheckTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:text="The vibrator has amplitude control according to the manufactor, but the actual behavior may vary."
+                android:textAlignment="viewStart" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -97,6 +109,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="true"
+                    android:minHeight="48dp"
                     android:onClick="changeInfo"
                     android:text="OneShot" />
 
@@ -104,6 +117,7 @@
                     android:id="@+id/radioButtonWaveForm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:onClick="changeInfo"
                     android:text="Waveform" />
 
@@ -184,7 +198,8 @@
                     android:ems="10"
                     android:inputType="numberSigned"
                     android:text="-1"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
 
             <LinearLayout
@@ -232,6 +247,7 @@
                 android:paddingBottom="8dp"
                 android:text="Time(ms): The number of milliseconds to vibrate. This must be a positive number. \n\nAmplitude: The strength of the vibration. This must be a value between 1 and 255, or DEFAULT_AMPLITUDE(-1). \n\nRepeat: No use"
                 android:textAlignment="viewStart" />
+
         </LinearLayout>
     </ScrollView>
 

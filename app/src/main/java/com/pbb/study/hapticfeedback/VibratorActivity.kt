@@ -5,7 +5,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
-import android.view.InputDevice
 import android.view.View
 import android.widget.Button
 import androidx.annotation.RequiresApi
@@ -18,6 +17,12 @@ class VibratorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vibrator)
         this.title = "Vibrator"
+
+        // Check support for amplitude control
+        val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        if (!vibrator.hasAmplitudeControl()){
+            ampCheckTextView.text = "The vibrator has NO amplitude control, but the actual behavior may vary."
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)

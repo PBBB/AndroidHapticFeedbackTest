@@ -59,6 +59,8 @@ class MainActivity : AppCompatActivity() {
     fun performAndroidRHaptics (view: View) {
         if (view is Button) {
             when (view.text.toString()) {
+                "GESTURE_START (12, Android R)" -> view.performHapticFeedback(12)
+                "GESTURE_END (13, Android R)" -> view.performHapticFeedback(13)
                 "CONFIRM (16, Android R)" -> view.performHapticFeedback(16)
                 "REJECT (17, Android R)" -> view.performHapticFeedback(17)
             }
