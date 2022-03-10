@@ -3,10 +3,7 @@ package com.pbb.study.hapticfeedback
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.view.HapticFeedbackConstants
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -57,17 +54,10 @@ class MainActivity : AppCompatActivity() {
                 "KEYBOARD_RELEASE (7)" -> view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_RELEASE)
                 "VIRTUAL_KEY_RELEASE (8)" -> view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY_RELEASE)
                 "TEXT_HANDLE_MOVE (9)" -> view.performHapticFeedback(HapticFeedbackConstants.TEXT_HANDLE_MOVE)
-            }
-        }
-    }
-
-    fun performAndroidRHaptics (view: View) {
-        if (view is Button) {
-            when (view.text.toString()) {
-                "GESTURE_START (12, Android R)" -> view.performHapticFeedback(12)
-                "GESTURE_END (13, Android R)" -> view.performHapticFeedback(13)
-                "CONFIRM (16, Android R)" -> view.performHapticFeedback(16)
-                "REJECT (17, Android R)" -> view.performHapticFeedback(17)
+                "GESTURE_START (12)" -> view.performHapticFeedback(HapticFeedbackConstants.GESTURE_START)
+                "GESTURE_END (13)" -> view.performHapticFeedback(HapticFeedbackConstants.GESTURE_END)
+                "CONFIRM (16)" -> view.performHapticFeedback(HapticFeedbackConstants.CONFIRM)
+                "REJECT (17)" -> view.performHapticFeedback(HapticFeedbackConstants.REJECT)
             }
         }
     }

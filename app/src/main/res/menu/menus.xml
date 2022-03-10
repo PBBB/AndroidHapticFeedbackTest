@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/composition"
-        android:title="Composition (Android R)" />
+        android:title="Composition" />
     <item
         android:id="@+id/vibrator"
         android:title="OneShot &amp; Waveform"

@@ -79,29 +79,29 @@
                 android:id="@+id/button15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="performAndroidRHaptics"
-                android:text="GESTURE_START (12, Android R)" />
+                android:onClick="performHaptics"
+                android:text="GESTURE_START (12)" />
 
             <Button
                 android:id="@+id/button16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="performAndroidRHaptics"
-                android:text="GESTURE_END (13, Android R)" />
+                android:onClick="performHaptics"
+                android:text="GESTURE_END (13)" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="performAndroidRHaptics"
-                android:text="CONFIRM (16, Android R)" />
+                android:onClick="performHaptics"
+                android:text="CONFIRM (16)" />
 
             <Button
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="performAndroidRHaptics"
-                android:text="REJECT (17, Android R)" />
+                android:onClick="performHaptics"
+                android:text="REJECT (17)" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
