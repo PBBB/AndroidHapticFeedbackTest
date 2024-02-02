@@ -7,18 +7,23 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import android.view.View
 import android.widget.Button
-import kotlinx.android.synthetic.main.activity_composition.*
+import com.pbb.study.hapticfeedback.databinding.ActivityCompositionBinding
+//import kotlinx.android.synthetic.main.activity_composition.*
 
 class CompositionActivity : AppCompatActivity() {
+
+    private lateinit var binding:ActivityCompositionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_composition)
+        binding = ActivityCompositionBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         this.title = "Composition"
 
         // Check support for primitives
         val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         if (vibrator.areAllPrimitivesSupported(VibrationEffect.Composition.PRIMITIVE_CLICK)) {
-            primSupportTextView.text = "This device support some of the following primitives."
+            binding.primSupportTextView.text = "This device support some of the following primitives."
         }
     }
 

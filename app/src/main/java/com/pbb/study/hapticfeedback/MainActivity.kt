@@ -7,15 +7,19 @@ import android.view.*
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.pbb.study.hapticfeedback.databinding.ActivityMainBinding
+//import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        button0.setOnLongClickListener {
+        binding.button0.setOnLongClickListener {
 //            it.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
 //            Toast.makeText(this, "Long click detected", Toast.LENGTH_SHORT).show()
             true
@@ -63,7 +67,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun playCustomHaptics(view: View) {
-        val id = hapticsID.text.toString().toIntOrNull()
+        val id = binding.hapticsID.text.toString().toIntOrNull()
         if (id == null) {
             val dialogBuilder = AlertDialog.Builder(this)
                 .setPositiveButton("OK", DialogInterface.OnClickListener {
