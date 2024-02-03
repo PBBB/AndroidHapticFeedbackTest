@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="?android:attr/actionBarSize"
         tools:layout_editor_absoluteX="8dp">
 
         <LinearLayout
@@ -167,6 +168,10 @@
                 android:paddingBottom="8dp"
                 android:text="This very short low frequency effect should produce a light crisp sensation intended to be used repetitively for dynamic feedback."
                 android:textAlignment="viewStart" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
 
         </LinearLayout>
     </ScrollView>

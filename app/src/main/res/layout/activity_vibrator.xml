@@ -9,6 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="?android:attr/actionBarSize"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
@@ -214,7 +216,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="performOneShotOrWaveformVibration"
-                    android:paddingEnd="4dp"
                     android:text="Vibrate" />
 
                 <Button
@@ -223,7 +224,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="stopVibrate"
-                    android:paddingStart="4dp"
                     android:text="Stop" />
             </LinearLayout>
 
@@ -248,6 +248,10 @@
                 android:paddingBottom="8dp"
                 android:text="Time(ms): The number of milliseconds to vibrate. This must be a positive number. \n\nAmplitude: The strength of the vibration. This must be a value between 1 and 255, or DEFAULT_AMPLITUDE(-1). \n\nRepeat: No use"
                 android:textAlignment="viewStart" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
 
         </LinearLayout>
     </ScrollView>

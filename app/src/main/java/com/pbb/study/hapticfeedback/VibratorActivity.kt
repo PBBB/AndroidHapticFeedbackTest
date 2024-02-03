@@ -7,6 +7,7 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import android.view.View
 import android.widget.Button
+import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.pbb.study.hapticfeedback.databinding.ActivityVibratorBinding
@@ -17,6 +18,7 @@ class VibratorActivity : AppCompatActivity() {
     private lateinit var binding: ActivityVibratorBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = ActivityVibratorBinding.inflate(layoutInflater)
         val view = binding.root

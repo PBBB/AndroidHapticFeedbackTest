@@ -7,6 +7,7 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import android.view.View
 import android.widget.Button
+import androidx.activity.enableEdgeToEdge
 import com.pbb.study.hapticfeedback.databinding.ActivityCompositionBinding
 //import kotlinx.android.synthetic.main.activity_composition.*
 
@@ -14,6 +15,7 @@ class CompositionActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityCompositionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = ActivityCompositionBinding.inflate(layoutInflater)
         val view = binding.root

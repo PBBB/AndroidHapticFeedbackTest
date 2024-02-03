@@ -7,9 +7,9 @@ Note that haptic feedbacks and vibration effects behave dramatically differently
 There are official Android documents talking about haptics in detail: [Haptics](https://source.android.com/devices/input/haptics). You should read them first to know the basics about haptics and what you can do with those APIs, before using this app to get hands on the actual feeling of the haptics.
 
 There are three ways to orchestrate haptic patterns: 
-- **Haptic Feedback**: suitable for input events (like long press, or swipe), or UI elements (like keyboard).
-- **OneShot & Waveform**: suitable for more refined vibration patterns that last over time.
-- **Composition**: According to the documents, compositions enable stringing together sequences of more nuanced haptics or vibrations. However, none of the devices I tested supports this feature including Pixel 5, so in this app you can only try the primitive haptics instead of composing them.
+- **Haptic Feedback**: suitable for input events (like long press, or swipe), or UI elements (like keyboard). However, the support from different phone vendors vary a lot.
+- **OneShot & Waveform**: best compatible, the effects are not optimal. Some phone vendors might have some optimizations over shorter vibrations.
+- **Composition**: According to the documents, compositions enable stringing together sequences of more nuanced haptics or vibrations.
 
 ## Haptics
 - Uses [View#performHapticFeedback](https://developer.android.com/reference/android/view/View#performHapticFeedback(int)).
