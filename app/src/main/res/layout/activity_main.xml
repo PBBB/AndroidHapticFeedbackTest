@@ -16,7 +16,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp">
 
             <Button
                 android:id="@+id/button0"
@@ -102,6 +104,55 @@
                 android:layout_height="wrap_content"
                 android:onClick="performHaptics"
                 android:text="REJECT (17)" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performHaptics"
+                android:text="TOGGLE_ON (21)" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performHaptics"
+                android:text="TOGGLE_OFF (22)" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performHaptics"
+                android:text="GESTURE_THRESHOLD_ACTIVATE (23)" />
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performHaptics"
+                android:text="GESTURE_THRESHOLD_DEACTIVATE (24)" />
+
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performHaptics"
+                android:text="DRAG_START (25)" />
+
+            <Button
+                android:id="@+id/button26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performHaptics"
+                android:text="SEGMENT_TICK (26)" />
+
+            <Button
+                android:id="@+id/button27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="performHaptics"
+                android:text="SEGMENT_FREQUENT_TICK (27)" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

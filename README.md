@@ -22,8 +22,7 @@ There are three ways to orchestrate haptic patterns:
 
 ## Composition
 - Uses [VibrationEffect.Composition](https://developer.android.com/reference/kotlin/android/os/VibrationEffect.Composition).
-- You can test all haptic primitives *which I failed to feel on all the devices available to me*.
-- If your devices support any haptic primitives, feel free to contact me.
+- You can test all haptic primitives.
 
 ## Some Notes
 This app doesn't have any data validation, so the app just crashes if the data can't be parsed. And the code is really a mess as a result of my unfamiliarity with Android development and Kotlin.

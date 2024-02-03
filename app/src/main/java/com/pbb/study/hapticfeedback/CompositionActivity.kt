@@ -34,13 +34,13 @@ class CompositionActivity : AppCompatActivity() {
 
             when (view.text.toString()) {
                 "PRIMITIVE_CLICK (1)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_CLICK)
-                "PRIMITIVE_THUD (2, Android S)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_THUD)
-                "PRIMITIVE_SPIN (3, Android S)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_SPIN)
+                "PRIMITIVE_THUD (2)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_THUD)
+                "PRIMITIVE_SPIN (3)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_SPIN)
                 "PRIMITIVE_QUICK_RISE (4)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_QUICK_RISE)
                 "PRIMITIVE_SLOW_RISE (5)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_SLOW_RISE)
                 "PRIMITIVE_QUICK_FALL (6)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_QUICK_FALL)
                 "PRIMITIVE_TICK (7)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_TICK)
-                "PRIMITIVE_LOW_TICK (8, Android S)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_LOW_TICK)
+                "PRIMITIVE_LOW_TICK (8)" -> compositon.addPrimitive(VibrationEffect.Composition.PRIMITIVE_LOW_TICK)
             }
 
             val viborationEffect = compositon.compose()

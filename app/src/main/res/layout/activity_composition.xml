@@ -16,7 +16,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp">
 
             <TextView
                 android:id="@+id/primSupportTextView"
@@ -52,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="performPrimitives"
-                android:text="PRIMITIVE_THUD (2, Android S)" />
+                android:text="PRIMITIVE_THUD (2)" />
 
             <TextView
                 android:id="@+id/prim2TextView"
@@ -69,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="performPrimitives"
-                android:text="PRIMITIVE_SPIN (3, Android S)" />
+                android:text="PRIMITIVE_SPIN (3)" />
 
             <TextView
                 android:id="@+id/prim3TextView"
@@ -154,7 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="performPrimitives"
-                android:text="PRIMITIVE_LOW_TICK (8, Android S)" />
+                android:text="PRIMITIVE_LOW_TICK (8)" />
 
             <TextView
                 android:id="@+id/prim8TextView"

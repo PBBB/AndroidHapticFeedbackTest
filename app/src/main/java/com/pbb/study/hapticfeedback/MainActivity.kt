@@ -62,6 +62,13 @@ class MainActivity : AppCompatActivity() {
                 "GESTURE_END (13)" -> view.performHapticFeedback(HapticFeedbackConstants.GESTURE_END)
                 "CONFIRM (16)" -> view.performHapticFeedback(HapticFeedbackConstants.CONFIRM)
                 "REJECT (17)" -> view.performHapticFeedback(HapticFeedbackConstants.REJECT)
+                "TOGGLE_ON (21)" -> view.performHapticFeedback(HapticFeedbackConstants.TOGGLE_ON)
+                "TOGGLE_OFF (22)" -> view.performHapticFeedback(HapticFeedbackConstants.TOGGLE_OFF)
+                "GESTURE_THRESHOLD_ACTIVATE (23)" -> view.performHapticFeedback(HapticFeedbackConstants.GESTURE_THRESHOLD_ACTIVATE)
+                "GESTURE_THRESHOLD_DEACTIVATE (24)" -> view.performHapticFeedback(HapticFeedbackConstants.GESTURE_THRESHOLD_DEACTIVATE)
+                "DRAG_START (25)" -> view.performHapticFeedback(HapticFeedbackConstants.DRAG_START)
+                "SEGMENT_TICK (26)" -> view.performHapticFeedback(HapticFeedbackConstants.SEGMENT_TICK)
+                "SEGMENT_FREQUENT_TICK (27)" -> view.performHapticFeedback(HapticFeedbackConstants.SEGMENT_FREQUENT_TICK)
             }
         }
     }
